@@ -7,8 +7,8 @@
   "module": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run-test": "npx wdio run wdio.conf.cjs",
-    "generate-report": "cleandir ./allure-results && allure generate allure-results --clean -o allure-report",
+    "run-test": "cleandir ./allure-results && npx wdio run wdio.conf.cjs ",
+    "generate-report": "allure generate allure-results --clean -o allure-report",
     "open-report": "allure serve ./allure-results"
   },
   "repository": {

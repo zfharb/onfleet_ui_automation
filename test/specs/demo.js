@@ -9,10 +9,8 @@ describe('google page', () => {
         browser.url('https://www.google.com/')
 
         HomePage.searchBox.keys("hawaii\n")
-        console.log(ResultPage.hawaiiTravelInfoLink)
         ResultPage.hawaiiTravelInfoLink.click()
         HawaiiTravelInfoPage.mainLogo
-        console.log(browser.getTitle())
         expect(browser.getTitle()).to.equal('Hawaii Travel Information | Official Hawaiian Islands Vacation Guide | Go Hawaii')
 
         browser.pause(10000)
