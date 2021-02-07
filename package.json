@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
+  "module": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run-test": "allure generate allure-results --clean -o allure-report",
+    "run-test": "npx wdio run wdio.conf.cjs",
+    "generate-report": "cleandir ./allure-results && allure generate allure-results --clean -o allure-report",
     "open-report": "allure serve ./allure-results"
   },
   "repository": {
@@ -27,7 +30,11 @@
     "@wdio/spec-reporter": "^6.11.0",
     "@wdio/sync": "^6.11.0",
     "allure-commandline": "^2.13.8",
+    "chai": "^4.3.0",
     "chromedriver": "^88.0.0",
+    "clean-dir": "^1.0.3",
+    "mocha": "^8.2.1",
+    "npx": "^10.2.2",
     "wdio-chromedriver-service": "^6.0.4"
   },
   "dependencies": {

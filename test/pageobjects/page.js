@@ -15,3 +15,4 @@ export default class Page {
         } while (currentDate - date < milliseconds);
     }
 }
+
